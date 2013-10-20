@@ -3,15 +3,8 @@
 require 'bundler/setup'
 Bundler.require(:default)
 
-app = proc do
-  [
-    200,
-    { 'Content-Type' => 'text/html' },
-    ['Pondering an entrance back into the world of blogging, check back soon.']
-  ]
-end
-
-class MySimpleWebsite
+module RackSite
+  extend self
 
   FORMATS = {
     'html' => 'text/html',
@@ -51,6 +44,7 @@ class MySimpleWebsite
     [rendered, format]
   end
 
+  # Renderers
   def render_using_html(contents)
     contents
   end
@@ -71,6 +65,7 @@ class MySimpleWebsite
     raise LoadError, "Unable to find a renderer for #{name}"
   end
 
+  # Main Render
   def render(response, format, status = 200)
     headers                 = {}
     headers['Content-Type'] = FORMATS[format] if FORMATS[format]
@@ -79,4 +74,4 @@ class MySimpleWebsite
 
 end
 
-run MySimpleWebsite.new
+run RackSite
