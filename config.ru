@@ -1,3 +1,5 @@
+# A rack server for serving and rendering flat files.
+
 require 'bundler/setup'
 Bundler.require(:default)
 
