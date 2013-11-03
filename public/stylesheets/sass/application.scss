@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic);
+
+body {
+  font-family: 'Arimo', 'sans-serif';
+  font-size: 1.2em;
+}
+
+header {
+  border-bottom: #cccccc 1px solid;
+
+  h1 {
+    float: left;
+    font-weight: normal;
+  }
+
+  nav {
+    float: right;
+  }
+}
+
+content {
+  font-size: 0.8em;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+} /* Hides from IE-mac \*/
+.clearfix {
+  display: block;
+}

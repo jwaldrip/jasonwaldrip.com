@@ -1,0 +1,14 @@
+!!!html
+%head
+  = stylesheet_tag :application
+  = page_stylesheet_tag
+%body
+  %header.clearfix
+    %h1
+      Jason Waldrip
+    %nav
+      %a{ href: '/' } Home
+      |
+      %a{ href: '/posts' } Posts
+  %content
+    = yield
