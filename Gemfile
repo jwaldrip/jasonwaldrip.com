@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rack'
-gem 'haml'
-gem 'pygments.rb'
+gem 'flatrack'
+gem 'haml-flatrack'
+gem 'shotgun'
 gem 'pry'
-gem 'thin'
-gem 'sass'
 
 group :development do
   gem 'foreman'
