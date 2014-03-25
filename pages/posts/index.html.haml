@@ -1,3 +1,4 @@
+- extend PostsHelper
 %h1 Posts
-- files.each do |file|
-  %a{ href: "#{path}/#{file}" }= file
+- posts.each do |post|
+  = link_to(post.name, post.link)
