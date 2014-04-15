@@ -1,0 +1,30 @@
+- use_layout :resume
+%header.container
+  .address
+    10566 Cherrybrook Circle, Highlands Ranch, CO, 80126
+  .personal-info.clearfix
+    .name
+      %h1 Jason Waldrip
+      %h2 Resume
+    .contact-info
+      = link_to 'jason@waldrip.net', 'mailto:jason@waldrip.net'
+      (646) 460-5959
+%main.container
+  %section.summary
+    %h2 Career Summary
+    %p
+      Eight years experience developing, designing, and managing
+      innovative software solutions through a process of research, analysis,
+      internal representation, and the agile framework.
+
+  %section.employment
+    %h2 Employment
+    = render 'resume/itriage'
+    = render 'resume/resipsa'
+    = render 'resume/kit-digital'
+    = render 'resume/unicorn-media'
+    = render 'resume/viddler'
+    = render 'resume/limelight-networks'
+
+
+

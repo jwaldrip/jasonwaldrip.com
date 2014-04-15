@@ -1,0 +1,53 @@
+html,body {
+  font-family: 'Open Sans';
+  -webkit-print-color-adjust:exact;
+}
+
+header {
+  // Nothing here yet...
+}
+
+div {
+  page-break-inside: avoid;
+}
+
+main {
+  .employment {
+    .position {
+      position: relative;
+      padding-left: 30px;
+      padding-bottom: 5px;
+      .location {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.date-range {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 21px;
+  color: #fff;
+  background-color: #444;
+
+  .rotated-range {
+    font-size: 0.8em;
+    -webkit-transform-origin: 0% 0%;
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+    position: absolute;
+    overflow: visible;
+    left: 1px;
+  }
+
+  .start {
+    @extend .rotated-range;
+    bottom: 18px;
+  }
+  .end {
+    @extend .rotated-range;
+    top: 10px;
+  }
+}
