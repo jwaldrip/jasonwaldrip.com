@@ -1,3 +1,4 @@
+- extend ResumeHelper
 - use_layout :resume
 %header.container
   .address
@@ -19,12 +20,4 @@
 
   %section.employment
     %h2 Employment
-    = render 'resume/itriage'
-    = render 'resume/resipsa'
-    = render 'resume/kit-digital'
-    = render 'resume/unicorn-media'
-    = render 'resume/viddler'
-    = render 'resume/limelight-networks'
-
-
-
+    = render_jobs
