@@ -1,0 +1,46 @@
+@media print {
+
+  div {
+    page-break-inside: avoid;
+  }
+
+  * {
+    color: inherit !important;
+    text-shadow: none !important;
+    background: inherit !important;
+    background-color: inherit !important;
+    box-shadow: none !important;
+  }
+
+//  h1, h2, h3, h4, h5, h6 {
+//    font-size: 1em;
+//  }
+
+  html, body {
+    font-size: 0.7em;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  header {
+    font-size: 1.5em;
+    margin: 25px;
+    #personal-info {
+      .primary-info {
+        .address {
+          font-size: 2em;;
+        }
+        .name {
+          font-size: 3em;;
+        }
+      }
+      .additional-info {
+        font-size: 2em;
+        float: right;
+      }
+    }
+  }
+
+  section#summary {
+    padding: 15px !important;
+  }
+}

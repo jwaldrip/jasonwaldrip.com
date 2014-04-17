@@ -7,12 +7,8 @@ module ResumeHelper
     .map { |f| load_job f }
     .sort_by { |p| p[:end_date] }
     .reverse
-    .map { |p| render 'resume/_position', p }
+    .map { |p| render 'resume/position', p }
     .join("\n")
-  end
-
-  def render_job(name)
-    render 'resume/_position', load_job("data/resume/jobs/#{name}.yml")
   end
 
   def load_job(file)

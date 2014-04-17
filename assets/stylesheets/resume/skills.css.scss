@@ -1,0 +1,44 @@
+main {
+  #skills {
+    margin-top: 25px;
+    @extend .span-4;
+    @extend .pull-right;
+
+    h1, h2, h3, h4, h5, h6 {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    section {
+      color: #fff !important;
+      background-color: #333 !important;
+
+      &:first-of-type {
+        border-radius: 10px 10px 0 0;
+        padding-top: 30px
+      }
+
+      &:last-of-type {
+        border-radius: 0 0 10px 10px;
+        padding-bottom: 30px
+      }
+
+      padding: 10px 30px;
+
+      ul {
+        display: block;
+        list-style: none;
+        padding-left: 0;
+        li {
+          border-radius: 5px;
+          padding: 2px 8px;
+          margin-right: 4px;
+          margin-bottom: 5px;
+          background-color: #666 !important;;
+          float: left
+        }
+      }
+    }
+  }
+}

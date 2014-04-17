@@ -1,0 +1,18 @@
+$grid-columns: 12;
+@import "bootstrap";
+
+@for $i from 1 through $grid-columns {
+  .span-#{$i} {
+    @extend .col-lg-#{$i};
+    @extend .col-md-#{$i};
+    @extend .col-sm-#{$i};
+    @extend .col-xs-#{$i};
+  }
+
+  .offset-#{$i} {
+    @extend .col-lg-offset-#{$i};
+    @extend .col-md-offset-#{$i};
+    @extend .col-sm-offset-#{$i};
+    @extend .col-xs-offset-#{$i};
+  }
+}

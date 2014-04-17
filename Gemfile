@@ -6,6 +6,8 @@ gem 'haml-flatrack', '~> 1.0.0'
 gem 'thin'
 gem 'chronic'
 gem 'pry'
+gem 'bootstrap-sass'
+gem 'uglifier'
 
 group :development do
   gem 'shotgun'

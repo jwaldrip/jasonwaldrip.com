@@ -1,0 +1,26 @@
+header {
+  font-size: 150%;
+  margin: 25px;
+  #personal-info {
+    .primary-info {
+      float: left;
+      h1, h2, h3, h4, h5, h6 {
+        &:first-of-type {
+          margin-top: 10px;
+        }
+      }
+      .name {
+        color: #419AD5 !important;
+        font-size: 300%;
+        font-family: 'NewJuneSemiboldRegular';
+      }
+      .subject {
+        font-family: 'NewJuneMediumRegular';
+      }
+    }
+    .additional-info {
+      text-align: right;
+      float: right;
+    }
+  }
+}

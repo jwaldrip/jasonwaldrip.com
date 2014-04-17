@@ -1,26 +1,16 @@
-html,body {
-  font-family: 'Open Sans';
-  -webkit-print-color-adjust:exact;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import 'bootstrap-helpers';
+@import 'resume/**/*';
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 25px;
 }
 
-header {
-  // Nothing here yet...
-}
-
-div {
-  page-break-inside: avoid;
-}
-
-main {
-  .employment {
-    .position {
-      position: relative;
-      padding-left: 30px;
-      padding-bottom: 5px;
-      .location {
-        font-style: italic;
-      }
-    }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'NewJuneMediumRegular';
+  small {
+    font-family: 'Open Sans';
   }
 }
 
@@ -30,11 +20,11 @@ main {
   bottom: 0;
   position: absolute;
   width: 21px;
-  color: #fff;
-  background-color: #444;
+  color: #fff !important;
+  background-color: #444 !important;
 
   .rotated-range {
-    font-size: 0.8em;
+    font-size: 0.9em;
     -webkit-transform-origin: 0% 0%;
     -webkit-transform: rotate(-90deg) translateX(-100%);
     position: absolute;

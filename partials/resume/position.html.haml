@@ -2,15 +2,18 @@
   .date-range
     .start= start_date.year
     .end= end_date.year
-  %h3
+  %h3.organization
     = organization
-    %small #{start_date.strftime('%B %Y')} - #{end_date.strftime('%B %Y')}
+    %small
+      = start_date.strftime('%B %Y')
+      \-
+      = end_date > Date.today.beginning_of_month ? 'Present' : end_date.strftime('%B %Y')
   .title
     = title
   .location
     = location
   .description
-    %ul
+    %ul.accomplishments
       - accomplishments.each do |bullet|
         %li
           = bullet
