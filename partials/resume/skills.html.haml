@@ -1,16 +1,12 @@
+- extend SkillsHelper
+
 %section
   %h2 Skills
 
   %h4 Languages
   %ul.clearfix
-    %li Ruby
-    %li Rubymotion
-    %li Javascript
-    %li HTML
-    %li HAML
-    %li CSS
-    %li Shell
-    %li Elixr
+    - languages.each do |language|
+      %li= link_to language, "//github.com/search?q=user%3Ajwaldrip+fork%3Atrue&type=Repositories&ref=advsearch&l=#{language}&s=updated", target: '_blank'
 
 %section
   %h4 Frameworks
@@ -28,11 +24,10 @@
     %li MySQL
     %li PostgresSQL
     %li MongoDB
-    %li Riak
+    %li ElasticSearch
     %li Redis
-    %li Memcached
 
 %section
   %h4 Certifications
   %ul.clearfix
-    %li Certified Scrum Product Owner
+    %li= link_to('Certified Scrum Product Owner', 'http://www.scrumalliance.org/community/profile/jwaldrip')

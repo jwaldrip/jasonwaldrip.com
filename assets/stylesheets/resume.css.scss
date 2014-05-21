@@ -41,3 +41,12 @@ h1, h2, h3, h4, h5, h6 {
     top: 10px;
   }
 }
+
+#right-col {
+  z-index: 99;
+  margin-right: -$grid-gutter-width/2;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  @extend .span-4;
+  @extend .pull-right;
+}

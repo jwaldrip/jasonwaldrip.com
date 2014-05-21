@@ -1,0 +1,18 @@
+.education
+  .date-range
+    .end= end_date.year
+  %h4.school
+    = school
+    %br
+    %small
+      = start_date.year
+      \-
+      = end_date.year
+      \|
+      = location
+  - if(accomplishments rescue false)
+    .accomplishments
+      %ul.accomplishments
+        - accomplishments.each do |bullet|
+          %li
+            = bullet

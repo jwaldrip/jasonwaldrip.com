@@ -1,28 +1,14 @@
-- extend ResumeHelper
 - use_layout :resume
 
-%header.container
-  #personal-info.clearfix
-    .primary-info
-      .address 10566 Cherrybrook Circle, Highlands Ranch, CO, 80126
-      %h1.name Jason Waldrip
-      %h2.subject Resume
-    .additional-info
-      = link_to 'jason@waldrip.net', 'mailto:jason@waldrip.net'
-      .phone-number (646) 460-5959
+%header.container= render 'resume/header'
 %main.container
-
-  %section#summary
-    %h2 Career Summary
-    %p
-      Eight years experience developing, designing, and managing
-      innovative software solutions through a process of research, analysis,
-      internal representation, and the agile framework.
-
-  %section.clearfix
-    // Skills
-    #skills= render 'resume/skills'
-
+  %section#summary= render 'resume/summary'
+  .clearfix
+    %section#right-col
+      // Skills
+      %section#skills= render 'resume/skills'
+      // Education
+      %section#education= render 'resume/education'
+    %section#left-col
     // Start Employment List
-    %h2 Employment
-    = render_jobs
+    %section#employment= render 'resume/employment'

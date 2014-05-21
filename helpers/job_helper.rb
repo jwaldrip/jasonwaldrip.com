@@ -1,6 +1,6 @@
 require 'yaml'
 
-module ResumeHelper
+module JobHelper
 
   def render_jobs
     Dir['data/resume/jobs/*.yml']
@@ -17,8 +17,6 @@ module ResumeHelper
         locals[f] = Chronic.parse(locals[f]) if locals[f].present?
       end
     end
-  rescue
-    binding.pry
   end
 
 end

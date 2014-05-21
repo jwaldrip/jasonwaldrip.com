@@ -1,8 +1,5 @@
 main {
   #skills {
-    margin-top: 25px;
-    @extend .span-4;
-    @extend .pull-right;
 
     h1, h2, h3, h4, h5, h6 {
       &:first-of-type {
@@ -13,6 +10,10 @@ main {
     section {
       color: #fff !important;
       background-color: #333 !important;
+
+      a {
+        color: inherit;
+      }
 
       &:first-of-type {
         border-radius: 10px 10px 0 0;

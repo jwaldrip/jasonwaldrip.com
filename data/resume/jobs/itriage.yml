@@ -3,12 +3,14 @@ start_date:
 end_date:
   today
 organization:
-  iTriage Health
+  iTriage / Aetna
 title:
   Technical Product Owner, Team Lead, Senior Developer
 location:
   Denver, CO
 accomplishments:
-  - Leveraged knowledge and experience of distributed systems architecture to drive development and architecture decisions in order to satisfy consumer demand and the growth of the organization.
-  - Mentored junior developers through pairing and dissemination of general principals regarding object oriented programing, frameworks, and language knowledge.
-  - Lead a team of engineers through the delivery of several major releases and product features.
+  - Leverage knowledge and experience of distributed systems architecture in order to drive development and architecture
+    decisions to satisfy consumer demand and facilitate the growth of the organization.
+  - Mentor junior developers through pairing and dissemination of general principals regarding object oriented
+    programing, frameworks, and language knowledge.
+  - Lead a team of cross platform engineers that have released several major features.
