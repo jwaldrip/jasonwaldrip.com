@@ -16,6 +16,10 @@
 //    font-size: 1em;
 //  }
 
+  a[href]:after {
+    content: none;
+  }
+
   html, body {
     font-size: 0.7em;
     -webkit-print-color-adjust: exact !important;
@@ -27,14 +31,14 @@
     #personal-info {
       .primary-info {
         .address {
-          font-size: 2em;;
+          font-size: 1.5em;;
         }
         .name {
           font-size: 3em;;
         }
       }
       .additional-info {
-        font-size: 2em;
+        font-size: 1.5em;
         float: right;
       }
     }
