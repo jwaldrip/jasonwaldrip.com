@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby File.read('.ruby-version').strip
 
-gem 'flatrack', '~> 1.3.3.alpha.1'
+gem 'flatrack', '~> 1.3.3'
 gem 'redcarpet', '~> 3.1.1'
 gem 'haml-flatrack', '~> 1.0.0'
 gem 'thin'
