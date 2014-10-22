@@ -7,6 +7,7 @@ module JobHelper
     .map { |f| load_job f }
     .sort_by { |p| p[:end_date] }
     .reverse
+    .select { |p| p[:start_date] < Date.today }
     .map { |p| render 'resume/position', p }
     .join("\n")
   end
@@ -16,6 +17,7 @@ module JobHelper
       [:start_date, :end_date].each do |f|
         locals[f] = Chronic.parse(locals[f]) if locals[f].present?
       end
+      locals[:accomplishments] ||= []
     end
   end
 

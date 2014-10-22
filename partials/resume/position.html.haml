@@ -7,7 +7,7 @@
     %small
       = start_date.strftime('%B %Y')
       \-
-      = end_date > Date.today.beginning_of_month ? 'Present' : end_date.strftime('%B %Y')
+      = end_date > Date.today ? 'Present' : end_date.strftime('%B %Y')
   .title
     = title
   .location
