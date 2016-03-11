@@ -1,6 +1,6 @@
 @media print {
 
-  div {
+  .no-page-break {
     page-break-inside: avoid;
   }
 
@@ -11,10 +11,6 @@
     background-color: inherit !important;
     box-shadow: none !important;
   }
-
-//  h1, h2, h3, h4, h5, h6 {
-//    font-size: 1em;
-//  }
 
   a[href]:after {
     content: none;
@@ -31,20 +27,68 @@
     #personal-info {
       .primary-info {
         .address {
-          font-size: 1.5em;;
+          font-size: 1.3em;;
         }
         .name {
-          font-size: 3em;;
+          font-size: 4em;;
         }
       }
+
       .additional-info {
-        font-size: 1.5em;
+        font-size: 1.3em;
         float: right;
+      }
+
+      .subject {
+        font-size: 2.0em;
       }
     }
   }
 
   section#summary {
     padding: 15px !important;
+  }
+
+  main {
+    .date-range {
+      width: 14px;
+    }
+    h2 {
+      font-size: 3em;
+    }
+    h3 {
+      font-size: 2.1em;
+    }
+    .position {
+      .title {
+        font-size: 1.5em;
+      }
+      .location {
+        font-size: 1.3em;
+      }
+      ul {
+        padding-left: 25px;
+      }
+    }
+    section#skills {
+      h4 {
+        font-size: 1.7em;
+      }
+
+      section {
+        margin-top: -2px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    #education {
+      h2 {
+        font-size: 3em;
+      }
+      h4.school {
+        font-size: 1.7em;
+      }
+    }
   }
 }
