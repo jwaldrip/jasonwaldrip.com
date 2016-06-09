@@ -6,22 +6,36 @@
   %h4 Languages
   %ul.clearfix
     - languages.each do |language|
-      %li= link_to language, "//github.com/search?q=user%3Ajwaldrip+fork%3Atrue&type=Repositories&ref=advsearch&l=#{language}&s=updated", target: '_blank'
+      %li= link_to language.capitalize, "//github.com/search?q=user%3Ajwaldrip+fork%3Atrue&type=Repositories&ref=advsearch&l=#{language}&s=updated", target: '_blank'
 
 %section
   %h4 Frameworks
   %ul.clearfix
     %li Rails
+    %li React.js
+    %li Node.js
+    %li Express.js
+    %li Relay.js
     %li Sinatra
     %li Rack
     %li Backbone
+
+%section
+  %h4 DevOps
+  %ul.clearfix
     %li Docker
+    %li Kubernetes
+    %li Deis
+    %li CoreOS
+    %li Fleet
+    %li Systemd
 
 %section
   %h4 Databases
   %ul.clearfix
-    %li MySQL
     %li PostgresSQL
+    %li MySQL
+    %li Etcd
     %li MongoDB
     %li ElasticSearch
     %li Redis
