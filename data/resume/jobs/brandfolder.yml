@@ -9,14 +9,17 @@ title:
 location:
   Denver, CO
 accomplishments:
-  - Increased performance on IO intensive tasks by moving them to go-lang
-    microservices.
-  - Designed and built out Brandfolder's infrastructure. Reduced overall
-    cost by migrating from Heroku to AWS while getting significant performance
-    gains. Limited developer workflow pain points by implementing Deis, an
-    open-source Platform-as-a-Service with a Heroku-like interface.
-  - Designed and implemented architecture on product enhancements to the
-    application that let to over 500k in net new revenue and over 100 new
-    enterprise customers.
   - Hired and trained a development team of 6 employees to improve the product
-    and speed up development.
+    and increase overall development velocity.
+  - Designed and implemented product enhancements to the application that led to
+    over 500k in net new revenue and over 100 new enterprise customers.
+  - Migrated applications from Heroku to AWS in an effort to save on costs,
+    gain additional control, and increase overall performance. By using
+    Terraform, the infrastructure was able to be managed 100% in code with zero
+    manual intervention. In addition, the infrastructure was made highly
+    available by leveraging CoreOS, Fleet, and Etcd for distributed scheduling
+    and configuration management.
+  - Identified a performance degradation in which ruby would crash when handling
+    the creation of large zip files. We built a solution that leveraged the heavy
+    IO capability of go-lang in order to deliver multi-gigabyte zip files while
+    incurring minimal resource usage by the process.
