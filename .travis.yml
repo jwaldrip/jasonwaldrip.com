@@ -1,4 +1,8 @@
 language: bash
+env:
+  global:
+    - CLOUDSDK_CONTAINER_USE_CLIENT_CERTIFICATE=True
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 services:
   - docker
 before_deploy:
