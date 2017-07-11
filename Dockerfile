@@ -5,4 +5,4 @@ ADD Gemfile Gemfile.lock .ruby-version /app/
 RUN bundle install
 COPY . /app
 
-CMD flatrack start --port $PORT
+CMD rackup --port $PORT --host 0.0.0.0
