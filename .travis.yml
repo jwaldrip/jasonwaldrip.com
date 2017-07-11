@@ -1,0 +1,34 @@
+language: bash
+services:
+  - docker
+before_deploy:
+  # Install Psykube
+  - export PSYKUBE_RELEASES_URL=https://api.github.com/repos/commercialtribe/psykube/releases/latest
+  - export PSYKUBE_DOWNLOAD_URL=`curl -sSL $PSYKUBE_RELEASES_URL | jq -r '.assets[] | select(.name | contains("linux")).browser_download_url'`
+  - curl -sSL $PSYKUBE_DOWNLOAD_URL | sudo tar -xzC /usr/local/bin
+
+  - # Install Kubectl
+  - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  - chmod +x ./kubectl
+  - sudo mv ./kubectl /usr/local/bin/kubectl
+
+  # Re-install Gcloud from Scratch
+  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; curl https://sdk.cloud.google.com | bash; fi
+  - source /home/travis/google-cloud-sdk/path.bash.inc
+  - gcloud version
+
+  # Authenticate with Google Cloud
+  - echo $GCLOUD_ENCODED_CREDS | base64 -d > /tmp/gcloud.json
+  - gcloud auth activate-service-account --key-file=/tmp/gcloud.json
+
+  # Setup credentials for Google Cloud staging and production
+  - gcloud container clusters get-credentials waldrip-net --zone=us-central1-a --project=waldrip-net
+
+  # Authorize Docker
+  - gcloud docker --authorize-only
+
+deploy:
+  provider: script
+  script: psykube apply default
+  on:
+    branch: master

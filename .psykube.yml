@@ -1,0 +1,16 @@
+name: jasonwaldrip.com
+type: Deployment
+registry_host: gcr.io
+registry_user: waldrip-net
+replicas: 2
+clusters:
+  default:
+    context: gke_waldrip-net_us-central1-a_waldrip-net
+ports:
+  http: 8080
+ingress:
+  hosts:
+    - jasonwaldrip.com
+    - jasonwaldrip.net
+    - jason.waldrip.net
+  tls: true
