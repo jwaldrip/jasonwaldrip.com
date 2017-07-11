@@ -10,6 +10,7 @@ gem 'chronic'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'uglifier'
+gem 'therubyracer'
 
 group :development do
   gem 'shotgun'

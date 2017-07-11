@@ -1,0 +1,9 @@
+version: "2"
+services:
+  web:
+    build:
+      context: .
+    environment:
+      PORT: "5959"
+    ports:
+      - 5959:5959
