@@ -24,14 +24,11 @@ before_deploy:
   - echo $GCLOUD_ENCODED_CREDS | base64 -d > /tmp/gcloud.json
   - gcloud auth activate-service-account --key-file=/tmp/gcloud.json
 
-  # Install Docker Auth
-  - gcloud components install docker-credential-gcr
-
   # Setup credentials for Google Cloud staging and production
   - gcloud container clusters get-credentials waldrip-net --zone=us-central1-a --project=waldrip-net
 
   # Authorize Docker
-  - docker-credential-gcr configure-docker
+  - gcloud docker --authorize-only
 
 deploy:
   provider: script
