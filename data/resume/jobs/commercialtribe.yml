@@ -9,3 +9,15 @@ title:
 location:
   Denver, CO
 accomplishments:
+  - Lead architectural vision in order to continously acheive a higher standard
+    of scalabily, quality, and performance of the overall software solution.
+  - Represent the engineering team as a member of the executive leadership team.
+  - Manage collaboration and engineering efforts between onsite
+    engineers and remote engineers in Argentina.
+  - Code solutions in order to lay foundational architecture in order to acelerate
+    the efforts of the engineering team.
+  - Migrated the software stack to run on Kubernetes, an open-source container
+    orchestration system, enabling a significat reduction in infrastructure
+    costs while increasing overall performance and stability.
+  - Introduced a fast-paced automated testing and deployment solution, reducing
+    the time between software releases from weeks to hours.
