@@ -51,3 +51,9 @@ h1, h2, h3, h4, h5, h6 {
   @extend .span-4;
   @extend .pull-right;
 }
+
+@media print {
+  #right-col {
+    page-break-inside: avoid;
+  }
+}
