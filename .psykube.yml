@@ -8,6 +8,11 @@ clusters:
     context: gke_waldrip-net_us-central1-a_waldrip-net
 ports:
   http: 8080
+env:
+  GITHUB_TOKEN:
+    secret:
+      name: jwaldrip-github
+      key: token
 ingress:
   hosts:
     - jasonwaldrip.com
