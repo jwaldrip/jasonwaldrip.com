@@ -7,17 +7,21 @@ main {
       position: relative;
       padding-left: 30px;
       padding-bottom: 5px;
+      @media print {
+        padding-left: 0;
+      }
       h3.organization {
+        font-size: 18pt;
         margin-bottom: 2px;
         small {
           color: #666 !important;
           font-style: italic;
-          font-size: 0.8em;
+          font-size: 10pt;
           font-weight: normal;
         }
       }
       .title {
-        font-size: 1.2em;
+        font-size: 14pt;
       }
       .location {
         font-style: italic;

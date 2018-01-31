@@ -11,6 +11,9 @@ header {
       .name {
         color: #419AD5 !important;
         font-size: 48pt;
+        @media print {
+          font-size: 42pt !important;
+        }
         font-family: 'NewJuneSemiboldRegular';
       }
       .subject {
@@ -19,7 +22,11 @@ header {
       }
     }
     .additional-info {
+      margin-top: 24px;
       font-size: 18pt;
+      @media print {
+        font-size: 14pt !important;
+      }
       text-align: right;
       float: right;
     }

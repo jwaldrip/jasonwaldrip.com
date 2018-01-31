@@ -52,11 +52,19 @@ h1, h2, h3, h4, h5, h6 {
   @extend .pull-right;
 }
 
+.print-only {
+  display: none;
+}
+
 @media print {
+  .print-only {
+    display: block;
+  }
+
   #right-col {
     page-break-inside: avoid;
   }
-  
+
   .date-range {
     display: none;
   }

@@ -1,4 +1,4 @@
-FROM ruby:2.2.3
+FROM ruby:2.3.1
 
 WORKDIR /app
 ADD Gemfile Gemfile.lock .ruby-version /app/
