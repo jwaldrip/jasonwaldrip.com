@@ -1,26 +1,31 @@
 main {
-  .position {
-    position: relative;
-    padding-left: 30px;
-    padding-bottom: 5px;
-    h3.organization {
-      margin-bottom: 2px;
-      small {
-        color: #666 !important;
-        font-style: italic;
-        font-size: 0.8em;
-        font-weight: normal;
+  #employment {
+    h2 {
+      font-size: 24pt;
+    }
+    .position {
+      position: relative;
+      padding-left: 30px;
+      padding-bottom: 5px;
+      h3.organization {
+        margin-bottom: 2px;
+        small {
+          color: #666 !important;
+          font-style: italic;
+          font-size: 0.8em;
+          font-weight: normal;
+        }
       }
-    }
-    .title {
-      font-size: 1.2em;
-    }
-    .location {
-      font-style: italic;
-    }
-    ul.accomplishments {
-      margin-top: 10px;
-      list-style: square;
+      .title {
+        font-size: 1.2em;
+      }
+      .location {
+        font-style: italic;
+      }
+      ul.accomplishments {
+        margin-top: 10px;
+        list-style: square;
+      }
     }
   }
 }
