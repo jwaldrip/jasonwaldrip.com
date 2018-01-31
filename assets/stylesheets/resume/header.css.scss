@@ -1,5 +1,4 @@
 header {
-  font-size: 150%;
   margin: 25px;
   #personal-info {
     .primary-info {
@@ -11,14 +10,16 @@ header {
       }
       .name {
         color: #419AD5 !important;
-        font-size: 300%;
+        font-size: 48pt;
         font-family: 'NewJuneSemiboldRegular';
       }
       .subject {
+        font-size: 24pt;
         font-family: 'NewJuneMediumRegular';
       }
     }
     .additional-info {
+      font-size: 18pt;
       text-align: right;
       float: right;
     }
