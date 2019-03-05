@@ -18,4 +18,5 @@ ingress:
     - jasonwaldrip.com
     - jasonwaldrip.net
     - jason.waldrip.net
+    - jasonwaldrip.dev
   tls: true
